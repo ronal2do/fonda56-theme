@@ -51,4 +51,10 @@ function custom_post_type() {
 // Hook into the 'init' action
 add_action( 'init', 'custom_post_type', 0 );
 
+//query recupero offerte in ordine custom
+//http://fonda56:8888/wp-json/posts?type[]=offerta&filter[posts_per_page]=-1&filter[order]=menu_order
+
+//query recupero ultime 5 news
+//http://fonda56:8888/wp-json/posts?type[]=post&filter[posts_per_page]=5&filter[order]=DESC
+
 ?>
