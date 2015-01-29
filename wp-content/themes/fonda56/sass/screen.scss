@@ -1,0 +1,67 @@
+// ::Imports pre-render. Must be after reset
+// ------------------------------------------------------------
+@import "susy";
+@import "libs/required";
+@import "libs/reset";
+@import "libs/settings";
+@import "libs/mixins";
+@import "libs/placeholders";
+@import "breakpoint";
+
+// Use SASS globbing to import all _.scss files in the module folder.
+// These should be independent modules that follow the BEM/SMACSS way
+@import "modules/*";
+
+/* ::Base styles */
+/* ------------------------------------------------------------ */
+
+html {
+	font-size: 100%;
+	/* normalize text rendering */
+	-webkit-font-smoothing: antialiased;
+
+	@include respond-to-max(768px, $IE9: false) { // Stop at precise width, as we're talking about devices
+		-webkit-text-size-adjust: 100%;	// Stops text scaling in iOS.
+	}
+}
+
+body {
+	@extend .font-body;
+	background: $body-color;
+	color: $base-color;
+}
+
+a {
+	color: $action;
+	text-decoration: none;
+	@include link-active-styles { 	// Mixin for interactions (hover,focus,active)
+		color: $action-respond;
+	}
+	&:not(>img) {
+		@include force-wrap;
+	}
+}
+
+/* ::Import styles */
+/* ------------------------------------------------------------ */
+
+@import "libs/typography"; 					// Base level typography
+@import "libs/forms";						// Forms
+@import "add-ons/module-typeset"; 			// Specific typesetting
+
+/* main container */
+.container {
+	@include container;
+	@include clearfix;
+}
+
+
+/* ::Print */
+/* ------------------------------------------------------------ */
+
+@media print {
+	body {
+		@include adjust-leading-to(2);
+		font-size: percentage(10 / 16);
+	}
+}
