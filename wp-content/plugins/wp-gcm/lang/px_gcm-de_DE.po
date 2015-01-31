@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP GCM Plugin\n"
-"POT-Creation-Date: 2014-04-23 15:02+0100\n"
-"PO-Revision-Date: 2014-04-23 15:02+0100\n"
+"POT-Creation-Date: 2015-01-03 15:47+0100\n"
+"PO-Revision-Date: 2015-01-03 15:48+0100\n"
 "Last-Translator: \n"
 "Language-Team: Deniz Celebi, Pixelart <office@pixelartdev.com>\n"
 "Language: de_DE\n"
@@ -15,105 +15,204 @@ msgstr ""
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../1.1.9/options.php:6 ../1.1.9/options.php:13 ../1.1.9/page/write.php:26
-#: ../1.2.0/options.php:6 ../1.2.0/options.php:13 ../1.2.0/page/write.php:26
-#: ../1.2.1/options.php:6 ../1.2.1/options.php:13 ../1.2.1/page/write.php:26
-#: ../1.2.2/options.php:6 ../1.2.2/options.php:13 ../1.2.2/page/write.php:24
+#: ../wp-gcm/options.php:9 ../wp-gcm/options.php:19
+#: ../wp-gcm/page/write.php:24
 msgid "New Message"
 msgstr "Neue Nachricht"
 
-#: ../1.1.9/options.php:7 ../1.1.9/options.php:14 ../1.2.0/options.php:7
-#: ../1.2.0/options.php:14 ../1.2.1/options.php:7 ../1.2.1/options.php:14
-#: ../1.2.2/options.php:7 ../1.2.2/options.php:14
+#: ../wp-gcm/options.php:10 ../wp-gcm/options.php:20
+#: ../wp-gcm/page/list.php:186
+msgid "All Devices"
+msgstr "Alle Geräte"
+
+#: ../wp-gcm/options.php:11 ../wp-gcm/options.php:21
+#: ../wp-gcm/page/stats.php:67
+msgid "Stats"
+msgstr "Statistiken"
+
+#: ../wp-gcm/options.php:12 ../wp-gcm/options.php:22
+#: ../wp-gcm/page/export.php:6 ../wp-gcm/page/export.php:29
+msgid "Export"
+msgstr "Exportieren"
+
+#: ../wp-gcm/options.php:13 ../wp-gcm/options.php:23
+#: ../wp-gcm/page/settings.php:7
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: ../1.1.9/options.php:26 ../1.2.0/options.php:26 ../1.2.1/options.php:26
-#: ../1.2.2/options.php:26
+#: ../wp-gcm/options.php:35
 msgid "Api Key"
 msgstr "Api Schlüssel"
 
-#: ../1.1.9/options.php:27 ../1.2.0/options.php:27 ../1.2.1/options.php:27
-#: ../1.2.2/options.php:27
+#: ../wp-gcm/options.php:36
 msgid "New post info"
 msgstr "Neuer Artikel Info"
 
-#: ../1.1.9/options.php:28 ../1.2.0/options.php:28 ../1.2.1/options.php:28
-#: ../1.2.2/options.php:28
+#: ../wp-gcm/options.php:37
 msgid "Updated post info"
 msgstr "Aktualisierter Artikel Info"
 
-#: ../1.1.9/options.php:29 ../1.2.0/options.php:29 ../1.2.1/options.php:29
-#: ../1.2.2/options.php:29
+#: ../wp-gcm/options.php:38
 msgid "Display admin bar link"
 msgstr "AdminBar Link anzeigen"
 
-#: ../1.1.9/options.php:38 ../1.2.0/options.php:38 ../1.2.1/options.php:38
-#: ../1.2.2/options.php:39
+#: ../wp-gcm/options.php:39
+msgid "Show debug response"
+msgstr "Debug Antwort anzeigen"
+
+#: ../wp-gcm/options.php:49
 msgid "Required settings for the plugin and the App."
 msgstr "Benötigte Einstellungen für das Plugin und die App."
 
-#: ../1.1.9/options.php:85 ../1.2.0/options.php:85 ../1.2.1/options.php:85
-#: ../1.2.2/options.php:93
-msgid "Post updated"
-msgstr "Artikel geupdatet"
-
-#: ../1.1.9/options.php:106 ../1.2.0/options.php:106 ../1.2.1/options.php:106
-#: ../1.2.2/options.php:114
-msgid "New post"
-msgstr "Neuer Artikel"
-
-#: ../1.1.9/options.php:163 ../1.2.0/options.php:163 ../1.2.1/options.php:164
-#: ../1.2.2/options.php:174 ../1.2.2/options.php:176
+#: ../wp-gcm/options.php:222 ../wp-gcm/options.php:224
 msgid "Message sent."
 msgstr "Nachricht versendet."
 
-#: ../1.1.9/options.php:163 ../1.2.0/options.php:163 ../1.2.1/options.php:164
-#: ../1.2.2/options.php:176
+#: ../wp-gcm/options.php:224
 msgid "success:"
 msgstr "Erfolgreich:"
 
-#: ../1.1.9/options.php:163 ../1.2.0/options.php:163 ../1.2.1/options.php:164
-#: ../1.2.2/options.php:176
+#: ../wp-gcm/options.php:224
 msgid "fail:"
 msgstr "Gescheitert:"
 
-#: ../1.1.9/page/settings.php:16 ../1.2.0/page/settings.php:17
-#: ../1.2.1/page/settings.php:17 ../1.2.2/page/settings.php:13
+#: ../wp-gcm/page/export.php:12
+msgid "GCM export finished"
+msgstr "GCM export beendet"
+
+#: ../wp-gcm/page/export.php:13
+#, php-format
+msgid "%1$s click here %2$s to download"
+msgstr "zum downloaden %1$s hier %2$s klicken"
+
+#: ../wp-gcm/page/export.php:25
+msgid "Export the whole Database into an excel readable file."
+msgstr "Exportiere die gesamte Datenbank in eine Excel freundliche Datei"
+
+#: ../wp-gcm/page/list.php:96
+msgid "Device with ID"
+msgstr "Gerät mit Id"
+
+#: ../wp-gcm/page/list.php:96
+msgid "deleted"
+msgstr "gelöscht"
+
+#: ../wp-gcm/page/list.php:108 ../wp-gcm/page/view.php:66
+msgid "GCM ID"
+msgstr "GCM Id"
+
+#: ../wp-gcm/page/list.php:109 ../wp-gcm/page/view.php:62
+msgid "Database ID"
+msgstr "Datenbank Id"
+
+#: ../wp-gcm/page/list.php:110 ../wp-gcm/page/stats.php:84
+#: ../wp-gcm/page/view.php:70
+msgid "Device OS"
+msgstr "Betriebssystem vom Gerät"
+
+#: ../wp-gcm/page/list.php:111 ../wp-gcm/page/view.php:74
+msgid "Device Model"
+msgstr "Geräte Modell"
+
+#: ../wp-gcm/page/list.php:112
+msgid "Registered At"
+msgstr "Registriert am"
+
+#: ../wp-gcm/page/list.php:151
+msgid "View"
+msgstr "Ansehen"
+
+#: ../wp-gcm/page/list.php:152
+msgid "Delete"
+msgstr "Löschen"
+
+#: ../wp-gcm/page/list.php:174
+msgid "No registered Devices"
+msgstr "Keine registrierten Geräte"
+
+#: ../wp-gcm/page/settings.php:13
 msgid "Settings saved"
 msgstr "Einstellungen gespeichert"
 
-#: ../1.1.9/page/settings.php:24 ../1.2.0/page/settings.php:25
-#: ../1.2.1/page/settings.php:25 ../1.2.2/page/settings.php:21
+#: ../wp-gcm/page/settings.php:21
 msgid "GCM Settings"
 msgstr "GCM Einstellungen"
 
-#: ../1.1.9/page/write.php:15 ../1.2.0/page/write.php:15
-#: ../1.2.1/page/write.php:15 ../1.2.2/page/write.php:13
+#: ../wp-gcm/page/stats.php:75
+msgid "Total number of sent messages"
+msgstr "Insgesamt gesendete Nachrichten"
+
+#: ../wp-gcm/page/stats.php:80
+msgid "Device Models"
+msgstr "Geräte Modelle"
+
+#: ../wp-gcm/page/stats.php:88
+msgid "Messages success/fail"
+msgstr "erfolgreich/gescheiterte Nachrichten"
+
+#: ../wp-gcm/page/stats.php:146
+msgid "sent successfully"
+msgstr "erfolgreich gesendet"
+
+#: ../wp-gcm/page/stats.php:152
+msgid "sent unsuccessfully"
+msgstr "nicht erfolgreich gesendet"
+
+#: ../wp-gcm/page/view.php:50
+msgid "Single Device"
+msgstr "Einzelnes Gerät"
+
+#: ../wp-gcm/page/view.php:56
+msgid "Information"
+msgstr "Information"
+
+#: ../wp-gcm/page/view.php:78
+msgid "Registration Date"
+msgstr "Registrierungs Datum"
+
+#: ../wp-gcm/page/view.php:93
+msgid "Write a Message to this Device"
+msgstr "Eine Nachricht an dieses Gerät schicken"
+
+#: ../wp-gcm/page/view.php:96 ../wp-gcm/page/write.php:27
+msgid "Enter here your message"
+msgstr "Gib hier deine Nachricht ein"
+
+#: ../wp-gcm/page/view.php:98 ../wp-gcm/page/write.php:29
+msgid "*Please don't use HTML"
+msgstr "* Bitte kein HTML nutzen"
+
+#: ../wp-gcm/page/view.php:99 ../wp-gcm/page/write.php:30
+msgid "Send"
+msgstr "Senden"
+
+#: ../wp-gcm/page/view.php:118
+msgid "Messages sent to this device"
+msgstr "Nachrichten die an dieses Gerät geschickt wurden"
+
+#: ../wp-gcm/page/view.php:124
+msgid "Total Messages sent"
+msgstr "Insgesamt versendete Nachrichten"
+
+#: ../wp-gcm/page/write.php:14
 #, php-format
 msgid "currently %s users are registered"
 msgstr "Aktuell sind %s Nutzer registriert"
 
-#: ../1.1.9/page/write.php:29 ../1.2.0/page/write.php:29
-#: ../1.2.1/page/write.php:29 ../1.2.2/page/write.php:27
-msgid "Enter here your message"
-msgstr "Gib hier deine Nachricht ein"
-
-#: ../1.1.9/page/write.php:31 ../1.2.0/page/write.php:31
-#: ../1.2.1/page/write.php:31 ../1.2.2/page/write.php:29
-msgid "*Please don't use HTML"
-msgstr "* Bitte kein HTML nutzen"
-
-#: ../1.1.9/page/write.php:32 ../1.2.0/page/write.php:32
-#: ../1.2.1/page/write.php:32 ../1.2.2/page/write.php:30
-msgid "Send"
-msgstr "Senden"
-
-#: ../1.1.9/page/write.php:36 ../1.2.0/page/write.php:36
-#: ../1.2.1/page/write.php:36 ../1.2.2/page/write.php:34
+#: ../wp-gcm/page/write.php:34
 msgid "Info"
 msgstr "Info"
 
-#: ../1.2.2/options.php:30
-msgid "Show debug response"
-msgstr "Debug Antwort anzeigen"
+#: ../wp-gcm/register.php:18
+msgid "You are now registered"
+msgstr "Du bist nun registriert"
+
+#: ../wp-gcm/register.php:20
+msgid "You are already registered"
+msgstr "Du bist bereits registriert"
+
+#~ msgid "Post updated"
+#~ msgstr "Artikel geupdatet"
+
+#~ msgid "New post"
+#~ msgstr "Neuer Artikel"

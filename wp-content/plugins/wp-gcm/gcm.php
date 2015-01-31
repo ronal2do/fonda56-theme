@@ -1,28 +1,10 @@
 <?php
 /*
 Plugin Name: WP GCM
-Plugin  URI: http://wordpress.org/plugins/wp-gcm
 Description: Google Cloud Messaging Plugin for WordPress.
-Version: 1.2.8
+Version: 1.5.1
 Author: Deniz Celebi & Pixelart
-Author URI: http://profiles.wordpress.org/pixelart-dev/
-License: GPLv3
-License URI: http://www.gnu.org/licenses/old-licenses/gpl-3.0.html
-
-    Copyright 2014 Pixelart and Deniz Celebi  (email : office@pixelartdev.com)
-
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as 
-    published by the Free Software Foundation.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+Author URI: http://codecanyon.net/user/PixelartDev
 */
 
 $dir = px_gcm_dir();
@@ -30,9 +12,15 @@ $dir = px_gcm_dir();
 @include_once "$dir/options.php";
 @include_once "$dir/page/settings.php";
 @include_once "$dir/page/write.php";
+@include_once "$dir/page/list.php";
+@include_once "$dir/page/view.php";
+@include_once "$dir/page/stats.php";
+@include_once "$dir/page/export.php";
 @include_once "$dir/register.php";
 
- function px_gcm_activated() {
+
+// create db tables and register settings and so on after activation
+function px_gcm_activated() {
    	global $wpdb;
   	$px_table_name = $wpdb->prefix.'gcm_users';
 
@@ -40,35 +28,67 @@ $dir = px_gcm_dir();
 		$sql = "CREATE TABLE " . $px_table_name . " (
 		`id` int(11) NOT NULL AUTO_INCREMENT,
         `gcm_regid` text,
+		`os` text,
+		`model` text,
+		`send_msg` int,
         `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
         PRIMARY KEY (`id`)
 		);";
- 
-		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-		dbDelta($sql);
 	}
-         add_option('px_gcm_do_activation_redirect', true);
+	
+	require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+	dbDelta($sql);
+	
+	px_gcm_db_upgrade();
+	
+	add_option('px_gcm_total_msg', 0);
+	add_option('px_gcm_fail_msg', 0);
+	add_option('px_gcm_suc_msg', 0);
+	add_option('px_gcm_do_activation_redirect', true);
 }
 
+// redirect to settings after activation
 function px_gcm_setting_redirect() {
     if (get_option('px_gcm_do_activation_redirect', false)) {
         delete_option('px_gcm_do_activation_redirect');
-        if(!isset($_GET['activate-multi']))
-        {
+        if(!isset($_GET['activate-multi'])) {
             wp_redirect(get_site_url().'/wp-admin/admin.php?page=px-gcm-settings');
         }
     }
 }
 
+// do an upgrade on the db
+function px_gcm_db_upgrade() {
+	if(isset($_GET['gcm-upgrade']) ){
+		global $wpdb;  
+		$px_table_name = $wpdb->prefix.'gcm_users';
+		
+		$queryO = "UPDATE $px_table_name SET `os`= \'not set\' WHERE `os` = \'\' ";
+		$wpdb->query($queryO);
+		
+		$queryM = "UPDATE $px_table_name SET `model`= \'not set\' WHERE `model` = \'\' ";
+		$wpdb->query($queryM);
+	}
+}
+
+// register the scripts
+function px_gcm_view_scripts($hook) {
+	wp_enqueue_script('Chart', plugins_url( 'js/Chart.js', __FILE__ ));
+	wp_enqueue_script('CountUp', plugins_url( 'js/countUp.min.js', __FILE__ ));
+}
+
+
 function px_gcm_dir() {
-  if (defined('PX_GCM_DIR') && file_exists(PX_GCM_DIR)) {
+  if(defined('PX_GCM_DIR') && file_exists(PX_GCM_DIR)) {
     return PX_GCM_DIR;
-  } else {
+  }else {
     return dirname(__FILE__);
   }
 }
 
 register_activation_hook("$dir/gcm.php", 'px_gcm_activated');
 add_action('admin_init', 'px_gcm_setting_redirect');
+add_action('admin_enqueue_scripts', 'px_gcm_view_scripts');
 add_action('init','px_gcm_register');
+
 ?>
