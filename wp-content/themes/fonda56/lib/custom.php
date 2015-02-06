@@ -28,11 +28,11 @@ function retrieve_meta() {
 
 	$post_id   = intval( $_GET['id'] );
 
-	echo "gegge";
-
 	try {
 
-		echo $post_id;
+		$meta_values = get_post_meta($post_id);
+		//var_dump($meta_values);
+		wp_send_json($meta_values);
 	}
 
 	catch (Exception $e) {
