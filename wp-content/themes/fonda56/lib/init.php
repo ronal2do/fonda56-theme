@@ -13,8 +13,8 @@ function roots_setup() {
 
   // Add post thumbnails (http://codex.wordpress.org/Post_Thumbnails)
   add_theme_support('post-thumbnails');
-  set_post_thumbnail_size(720, 478, true);
-  add_image_size('copertina', 720, 478, true); // 300px wide (and unlimited height)
+  set_post_thumbnail_size(720, 300, true);
+  add_image_size('copertina', 720, 300, true); // 300px wide (and unlimited height)
 
   // Add post formats (http://codex.wordpress.org/Post_Formats)
   // add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));

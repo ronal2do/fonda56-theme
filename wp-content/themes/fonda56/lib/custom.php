@@ -3,6 +3,8 @@
  * Custom functions
  */
 
+ header('Access-Control-Allow-Origin: *');
+
  add_filter( 'json_serve_request', function( ) {
 
 	//if(strpos($_SERVER['REQUEST_URI'], 'meta') !== false) {
