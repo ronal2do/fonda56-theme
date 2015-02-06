@@ -5,11 +5,11 @@
 
  add_filter( 'json_serve_request', function( ) {
 
-	if(strpos($_SERVER['REQUEST_URI'], 'meta') !== false) {
+	//if(strpos($_SERVER['REQUEST_URI'], 'meta') !== false) {
 		//header('Access-Control-Allow-Origin: http://localhost:8100');
-	} else {
+	//} else {
 		//header('Access-Control-Allow-Origin: http://localhost:8100');
-	}
+	//}
 	header('Access-Control-Allow-Origin: *');
 	//header('Access-Control-Allow-Methods: GET, OPTIONS');
 	//header('Access-Control-Allow-Credentials: true');
@@ -26,11 +26,13 @@ add_action( 'wp_ajax_nopriv_retrieve_meta', 'retrieve_meta');
 //retrieve the meta for a post
 function retrieve_meta() {
 
-	$post_id   = intval( $_REQUEST['post_id'] );
+	$post_id   = intval( $_GET['id'] );
+
+	echo "gegge";
 
 	try {
 
-		echo true;
+		echo $post_id;
 	}
 
 	catch (Exception $e) {
