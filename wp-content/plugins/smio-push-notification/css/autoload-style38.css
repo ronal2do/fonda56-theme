@@ -1,0 +1,9 @@
+#toplevel_page_smpush_setting .wp-menu-image {
+background: url(../images/menuicon-smpush.png) 3px 110% no-repeat;
+}
+#toplevel_page_smpush_setting:hover .wp-menu-image {
+background-position: 3px 0px;
+}
+#smio-submit{
+margin-bottom:0!important;
+}

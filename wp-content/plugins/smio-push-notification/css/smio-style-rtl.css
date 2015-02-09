@@ -1,0 +1,13 @@
+#col-left{
+float: right;
+}
+#col-right{
+float: left;
+clear: none;
+}
+#smpush_model_select{
+margin-right: 10px;
+}
+a.add-new-h2{
+display: inline-block;
+}

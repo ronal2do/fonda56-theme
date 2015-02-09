@@ -1,0 +1,6 @@
+#toplevel_page_smpush_setting .wp-menu-image {
+background: url(../images/menuicon-smpush.png) 0px 97% no-repeat;
+}
+#toplevel_page_smpush_setting:hover .wp-menu-image {
+background-position: 0px -2px;
+}

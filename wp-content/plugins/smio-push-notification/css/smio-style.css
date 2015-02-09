@@ -1,0 +1,240 @@
+#col-container{
+clear: left;
+}
+#smpush-icon-setting{
+background-image:url('../images/options.png');
+height: 55px;
+width: 48px;
+margin-top: 1px;
+}
+#smpush-icon-devsetting{
+background-image:url('../images/Developer.png');
+height: 55px;
+width: 48px;
+margin-top: 1px;
+}
+#smpush-icon-doc{
+background-image:url('../images/help.png');
+height: 55px;
+width: 48px;
+margin-top: 1px;
+}
+#smpush-icon-push{
+background-image:url('../images/message.png');
+height: 55px;
+width: 48px;
+margin-top: 1px;
+}
+#smpush-icon-chanmanage{
+background-image:url('../images/square-add.png');
+height: 48px;
+width: 48px;
+margin-top: 1px;
+}
+#smpush-icon-connmanage{
+background-image:url('../images/connection.png');
+height: 48px;
+width: 48px;
+margin-top: 1px;
+}
+#smpush-icon-tokens{
+background-image:url('../images/password.png');
+height: 48px;
+width: 48px;
+margin-top: 1px;
+}
+#smpush-icon-archive{
+background-image:url('../images/archive.png');
+height: 48px;
+width: 48px;
+margin-top: 1px;
+}
+.smpush_process{
+display: none;
+}
+#smpush-message{
+width:450px;
+height:160px;
+}
+.smpush_progress{
+width:640px;
+padding:20px;
+margin:auto;
+}
+#smpush_progressbar{
+width:600px;
+margin:20px auto;
+}
+.smpush_progress_label{
+text-align: center;
+display: block;
+margin-top: 6px;
+font: bold 13px Arial;
+}
+#smpush_progressinfo{
+width:600px;
+height:340px;
+background-color:#fff;
+border:1px solid #dfdfdf;
+padding:8px;
+margin:13px auto;
+overflow:auto;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+#smpush_progressinfo p{
+color: #464646;
+margin: 6px 0;
+font: bold 12px "Open Sans",Arial;
+}
+#smpush_progressinfo p.error{
+color:red;
+}
+#smpush_progressinfo p strong{
+margin: 4px 0;
+display: block;
+color: #fff;
+font: bold 13px tahoma;
+background-color: #2ea2cc;
+padding: 5px;
+}
+.smpush_document{
+border-collapse: collapse;
+width: 100%;
+border-color: #ccc;
+border-style: solid;
+border: 0;
+}
+.smpush_document th{
+width: 150px;
+height:30px;
+background-color: #f5f5f5;
+text-align: left;
+font-family: "Source Sans Pro", sans-serif;
+font-weight: 700;
+font-size: 14px;
+padding: 4px 8px;
+border: #e0e0e0 1px solid;
+vertical-align: middle;
+}
+.smpush_tdhold{
+font-family: "Source Sans Pro", sans-serif;
+font-weight: 700;
+vertical-align: middle;
+border: #e0e0e0 1px solid;
+padding: 5px;
+word-break: break-word;
+}
+.smpush_td{
+font-family: "Source Sans Pro", sans-serif;
+font-weight: 700;
+vertical-align: middle;
+border-right: #e0e0e0 1px solid;
+}
+.smpush_td tr:last-child td{
+border-bottom: 0;
+}
+.smpush_td tr:first-child td{
+border-top: 0;
+}
+.smpush_tdparam{
+border-bottom: #e0e0e0 2px dashed;
+border-top: #e0e0e0 1px solid;
+border-right: #e0e0e0 1px solid;
+padding:5px;
+font-size: 15px;
+font-family: "Source Code Pro";
+font-style: normal;
+font-weight: 400;
+width: 100px;
+}
+.smpush_tdcode{
+border-bottom: #e0e0e0 2px dashed;
+border-top: #e0e0e0 1px solid;
+vertical-align: middle;
+}
+.smpush_tdcode td{
+border-top: #e0e0e0 1px solid!important;
+vertical-align: middle;
+line-height: 25px;
+}
+.smpush_tdcode tr:first-child td{
+border-top: 0!important;
+}
+.smpush_tdcode tr:last-child td{
+border-bottom: 0;
+}
+.smpush_document span{
+background-color: #FAFAFA;
+margin-right: 5px;
+padding-left: 5px;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+height: 25px;
+float: left;
+display: block;
+width: 105px;
+}
+.smpushtbwbord{
+border-right: #e0e0e0 1px solid;
+border-bottom: #e0e0e0 1px solid;
+}
+.smpush-errors p{
+width:500px;
+padding:4px;
+background-color:#D6492E;
+margin:4px 0;
+color:#fff;
+}
+#smio-submit{
+margin-bottom:10px;
+}
+.tablenav .tablenav-pages a,.tablenav .tablenav-pages span.current{
+padding: 3px 10px;
+font-size: 12px;
+font-weight: bold;
+}
+.smpush-center{
+text-align:center!important;
+}
+.smpush_pre{
+border: 1px solid #c7c7c7;
+font-family: courier;
+line-height: 19px;
+margin: 5px;
+background-color: #FFFFFF;
+color: #222;
+overflow: auto;
+padding: 7px;
+}
+#push-token-list td span{
+display: block;
+height: 40px;
+overflow: hidden;
+cursor: pointer;
+}
+.push-alternate td:last-child{
+border-right:solid 3px #0074a2;
+}
+.wp-list-table td, .wp-list-table th{
+vertical-align: middle!important;
+}
+#smpush-dashboard td{
+
+}
+#smpush-dashboard td label{
+font-size: 13px;
+}
+#smpush-dashboard td .description{
+line-height: 15px;
+margin-top: 6px;
+font-size: 13px;
+}
+.widefat td p{
+margin: 2px 0;
+}
+#col-left{
+float: left;
+}
